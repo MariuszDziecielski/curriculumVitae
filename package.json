@@ -1,0 +1,30 @@
+{
+  "name": "curriculumVitae",
+  "version": "1.0.0",
+  "description": "Mariusz Dzięcielski - Curriculum Vitae",
+  "main": "js/script.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MariuszDziecielski/curriculumVitae.git"
+  },
+  "keywords": [
+    "grunt"
+  ],
+  "author": "Mariusz Dziecielski",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MariuszDziecielski/curriculumVitae/issues"
+  },
+  "homepage": "https://github.com/MariuszDziecielski/curriculumVitae#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-contrib-imagemin": "^1.0.1",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-sass": "^2.0.0"
+  }
+}

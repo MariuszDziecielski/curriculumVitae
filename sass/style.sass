@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700&subset=latin-ext')
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700&subset=latin-ext')
+=dimensions($width, $height)
+    width: $width
+    height: $height
+body
+    font: normal 20px 'Roboto Condensed', sans-serif
+*
+    box-sizing: border-box
+img
+    max-width: 100%
+    height: auto
+.curriculum_vitae
+    max-width: 1200px
+    margin: 0 auto
+    display: flex
+    .hidden
+        display: none
+    aside
+        margin: 0
+        color: white
+        width: 39%
+        background-color: #435291
+        .photo
+            background-color: #303d70
+        .address
+            padding: 25px
+            background-color: #303d70
+            h2
+                margin: 0
+                font-size: 20px
+                &:nth-child(3)
+                    margin-top: 20px
+            p
+                margin: 0
+            a
+                color: white
+                text-decoration: none
+                &:visited
+                    text-decoration: none
+        .social_media
+            padding: 25px
+            h2
+                border-bottom: 3px solid white
+                i
+                    background-color: white
+                    color: #435291
+                    width: 50px
+                    height: 50px
+                    padding: 12px
+                    margin-right: 10px
+            a
+                color: white
+                text-decoration: none
+                font-size: .9em
+        .hobbies
+            padding: 25px
+            h2
+                border-bottom: 3px solid white
+                i
+                    background-color: white
+                    color: #435291
+                    width: 50px
+                    height: 50px
+                    padding: 12px 10px
+                    margin-right: 10px
+            ul
+                list-style: none
+                li
+                    margin-bottom: 30px
+                    margin-top: 50px
+                    i
+                        color: white
+                        width: 50px
+                        height: 50px
+                        font-size: 50px
+                        margin-right: 30px
+                        position: relative
+                        top: 12px
+    main
+        width: 60%
+        padding: 25px
+        h2
+            border-bottom: 3px solid #435291
+            i
+                background-color: #435291
+                color: white
+                width: 50px
+                height: 50px
+                padding: 12px 10px
+                margin-right: 10px
+        header
+            h1
+                font-size: 50px
+                margin: 0
+                margin-top: 10px
+            p
+                margin: 0
+        .skills
+            ul
+                list-style-image: url('../images/2.png')
+                line-height: 30px
+                padding-left: 28px
+                li
+                    margin-bottom: 10px
+        .occupational_experience
+            p
+                span
+                    color: #303d70
+                    font-weight: 900
+        .education
+            h2
+                i
+                    padding: 12px 7px
+            p
+                span
+                    color: #303d70
+                    font-weight: 900
+    h1,
+    h2
+        font-family: 'Open Sans Condensed', sans-serif
+        text-transform: uppercase
+footer
+    padding: 0 60px
+    text-align: center
+    font-size: 16px
+    max-width: 1200px
+    margin: 0 auto
+/* Media queries */
+/* For computers: */
+@media (max-width: 992px)
+    body
+        font-size: 19px
+    .curriculum_vitae
+        width: 100%
+        aside
+            .social_media
+                a
+                    font-size: .7em
+/* For tablets: */
+@media (max-width: 768px)
+    body
+        font-size: 18px
+    .curriculum_vitae
+        flex-direction: column
+        align-items: center
+        aside
+            width: 60%
+            .social_media
+                h2
+                    font-size: 4vw
+            .hobbies
+                h2
+                    font-size: 4vw
+/* For smart phones: */
+@media (max-width: 480px)
+    body
+        font-size: 17px
+    .curriculum_vitae
+        aside
+            width: 100%
+            .social_media
+                overflow-x: hidden
+                h2
+                    i
+                        width: 10vw
+                        height: 10vw
+                        font-size: 7vw
+                        padding: 2vw
+            .hobbies
+                h2
+                    i
+                        width: 10vw
+                        height: 10vw
+                        font-size: 7vw
+                        padding: 1.8vw 1.5vw
+        main
+            width: 100%
+    footer
+        font-size: 14px
