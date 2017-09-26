@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700&subset=latin-ext')
 @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700&subset=latin-ext')
+$whiteColor: #fff
 =dimensions($width, $height)
     width: $width
     height: $height
@@ -10,15 +11,33 @@ body
 img
     max-width: 100%
     height: auto
+a
+    color: $whiteColor
+    text-decoration: none
+    position: relative
+    display: inline-block
+    &:after
+        content: ''
+        position: absolute
+        bottom: 0
+        left: 0
+        width: 0%
+        border-bottom: 1px solid $whiteColor
+        transition: 0.5s ease
+    &:hover:after
+        width: 100%
+    &:visited
+        text-decoration: none
 .curriculum_vitae
     max-width: 1200px
     margin: 0 auto
+    -webkit-display: flex
     display: flex
     .hidden
         display: none
     aside
         margin: 0
-        color: white
+        color: $whiteColor
         width: 39%
         background-color: #435291
         .photo
@@ -33,46 +52,35 @@ img
                     margin-top: 20px
             p
                 margin: 0
-            a
-                color: white
-                text-decoration: none
-                &:visited
-                    text-decoration: none
         .social_media
             padding: 25px
             h2
-                border-bottom: 3px solid white
+                border-bottom: 3px solid $whiteColor
                 i
-                    background-color: white
+                    background-color: $whiteColor
                     color: #435291
-                    width: 50px
-                    height: 50px
+                    +dimensions(50px, 50px)
                     padding: 12px
                     margin-right: 10px
             a
-                color: white
-                text-decoration: none
                 font-size: .9em
         .hobbies
             padding: 25px
             h2
-                border-bottom: 3px solid white
+                border-bottom: 3px solid $whiteColor
                 i
-                    background-color: white
+                    background-color: $whiteColor
                     color: #435291
-                    width: 50px
-                    height: 50px
+                    +dimensions(50px, 50px)
                     padding: 12px 10px
                     margin-right: 10px
             ul
                 list-style: none
                 li
-                    margin-bottom: 30px
-                    margin-top: 50px
+                    margin: 50px 0 30px
                     i
-                        color: white
-                        width: 50px
-                        height: 50px
+                        color: $whiteColor
+                        +dimensions(50px, 50px)
                         font-size: 50px
                         margin-right: 30px
                         position: relative
@@ -84,16 +92,14 @@ img
             border-bottom: 3px solid #435291
             i
                 background-color: #435291
-                color: white
-                width: 50px
-                height: 50px
+                color: $whiteColor
+                +dimensions(50px, 50px)
                 padding: 12px 10px
                 margin-right: 10px
         header
             h1
                 font-size: 50px
-                margin: 0
-                margin-top: 10px
+                margin: 10px 0 0
             p
                 margin: 0
         .skills
@@ -104,10 +110,24 @@ img
                 li
                     margin-bottom: 10px
         .occupational_experience
+            h3
+                i
+                    color: #435291
+                    font-size: 30px
+                    +dimensions(33px, 33px)
+                    margin-right: 8px
+                    position: relative
+                    top: 2px
+                    &.fa-building
+                        margin-right: 0
             p
                 span
                     color: #303d70
                     font-weight: 900
+                a
+                    color: black
+                    &:after
+                        border-bottom-color: black
         .education
             h2
                 i
@@ -117,7 +137,8 @@ img
                     color: #303d70
                     font-weight: 900
     h1,
-    h2
+    h2,
+    h3
         font-family: 'Open Sans Condensed', sans-serif
         text-transform: uppercase
 footer
@@ -142,16 +163,26 @@ footer
     body
         font-size: 18px
     .curriculum_vitae
+        -webkit-flex-direction: column
         flex-direction: column
+        -webkit-align-items: center
         align-items: center
         aside
             width: 60%
             .social_media
                 h2
                     font-size: 4vw
+                    i
+                        +dimensions(7vw, 7vw)
+                        font-size: 4.5vw
+                        padding: 1.4vw
             .hobbies
                 h2
                     font-size: 4vw
+                    i
+                        +dimensions(7vw, 7vw)
+                        font-size: 4.5vw
+                        padding: 1.4vw 1.3vw
 /* For smart phones: */
 @media (max-width: 480px)
     body
@@ -163,15 +194,13 @@ footer
                 overflow-x: hidden
                 h2
                     i
-                        width: 10vw
-                        height: 10vw
+                        +dimensions(10vw, 10vw)
                         font-size: 7vw
                         padding: 2vw
             .hobbies
                 h2
                     i
-                        width: 10vw
-                        height: 10vw
+                        +dimensions(10vw, 10vw)
                         font-size: 7vw
                         padding: 1.8vw 1.5vw
         main
