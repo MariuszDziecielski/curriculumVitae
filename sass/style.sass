@@ -6,6 +6,7 @@ $whiteColor: #fff
     height: $height
 body
     font: normal 20px 'Roboto Condensed', sans-serif
+    line-height: 27px
 *
     box-sizing: border-box
 img
@@ -100,8 +101,22 @@ a
             h1
                 font-size: 50px
                 margin: 10px 0 0
+                line-height: normal
             p
                 margin: 0
+        .projects
+            ul
+                list-style-image: url('../images/3.png')
+                padding-left: 48px
+                li
+                    p
+                        span
+                            color: #303d70
+                            font-weight: 900
+                        a
+                            color: #303d70
+                            &:after
+                                border-bottom-color: black
         .skills
             ul
                 list-style-image: url('../images/2.png')
@@ -110,24 +125,13 @@ a
                 li
                     margin-bottom: 10px
         .occupational_experience
-            h3
+            h2
                 i
-                    color: #435291
-                    font-size: 30px
-                    +dimensions(33px, 33px)
-                    margin-right: 8px
-                    position: relative
-                    top: 2px
-                    &.fa-building
-                        margin-right: 0
+                    padding: 12px 13px
             p
                 span
                     color: #303d70
                     font-weight: 900
-                a
-                    color: black
-                    &:after
-                        border-bottom-color: black
         .education
             h2
                 i
@@ -137,8 +141,7 @@ a
                     color: #303d70
                     font-weight: 900
     h1,
-    h2,
-    h3
+    h2
         font-family: 'Open Sans Condensed', sans-serif
         text-transform: uppercase
 footer
