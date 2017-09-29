@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700&subset=latin-ext')
 @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700&subset=latin-ext')
 $whiteColor: #fff
+$lightBlueColor: #435291
+$darkBlueColor: #303d70
 =dimensions($width, $height)
     width: $width
     height: $height
@@ -40,12 +42,12 @@ a
         margin: 0
         color: $whiteColor
         width: 39%
-        background-color: #435291
+        background-color: $lightBlueColor
         .photo
-            background-color: #303d70
+            background-color: $darkBlueColor
         .address
             padding: 25px
-            background-color: #303d70
+            background-color: $darkBlueColor
             h2
                 margin: 0
                 font-size: 20px
@@ -59,7 +61,7 @@ a
                 border-bottom: 3px solid $whiteColor
                 i
                     background-color: $whiteColor
-                    color: #435291
+                    color: $lightBlueColor
                     +dimensions(50px, 50px)
                     padding: 12px
                     margin-right: 10px
@@ -71,7 +73,7 @@ a
                 border-bottom: 3px solid $whiteColor
                 i
                     background-color: $whiteColor
-                    color: #435291
+                    color: $lightBlueColor
                     +dimensions(50px, 50px)
                     padding: 12px 10px
                     margin-right: 10px
@@ -90,9 +92,9 @@ a
         width: 60%
         padding: 25px
         h2
-            border-bottom: 3px solid #435291
+            border-bottom: 3px solid $lightBlueColor
             i
-                background-color: #435291
+                background-color: $lightBlueColor
                 color: $whiteColor
                 +dimensions(50px, 50px)
                 padding: 12px 10px
@@ -111,12 +113,12 @@ a
                 li
                     p
                         span
-                            color: #303d70
+                            color: $darkBlueColor
                             font-weight: 900
                         a
-                            color: #303d70
+                            color: $darkBlueColor
                             &:after
-                                border-bottom-color: black
+                                border-bottom-color: $darkBlueColor
         .skills
             ul
                 list-style-image: url('../images/2.png')
@@ -130,7 +132,7 @@ a
                     padding: 12px 13px
             p
                 span
-                    color: #303d70
+                    color: $darkBlueColor
                     font-weight: 900
         .education
             h2
@@ -138,7 +140,7 @@ a
                     padding: 12px 7px
             p
                 span
-                    color: #303d70
+                    color: $darkBlueColor
                     font-weight: 900
     h1,
     h2
@@ -159,19 +161,38 @@ footer
         width: 100%
         aside
             .social_media
+                h2
+                    font-size: 3.1vw
+                    i
+                        +dimensions(6vw, 6vw)
+                        font-size: 4vw
+                        padding: 1.2vw
                 a
                     font-size: .7em
+            .hobbies
+                h2
+                    font-size: 3.1vw
+                    i
+                        +dimensions(6vw, 6vw)
+                        font-size: 4vw
+                        padding: 1.2vw 1.1vw
 /* For tablets: */
 @media (max-width: 768px)
     body
         font-size: 18px
+        margin: 0
     .curriculum_vitae
         -webkit-flex-direction: column
         flex-direction: column
         -webkit-align-items: center
         align-items: center
         aside
-            width: 60%
+            width: 100%
+            .photo
+                -webkit-display: flex
+                display: flex
+                -webkit-justify-content: center
+                justify-content: center
             .social_media
                 h2
                     font-size: 4vw
@@ -186,27 +207,78 @@ footer
                         +dimensions(7vw, 7vw)
                         font-size: 4.5vw
                         padding: 1.4vw 1.3vw
+        main
+            width: 100%
 /* For smart phones: */
 @media (max-width: 480px)
     body
         font-size: 17px
+        overflow-x: hidden
     .curriculum_vitae
         aside
-            width: 100%
+            .photo
+                -webkit-align-items: center
+                align-items: center
             .social_media
-                overflow-x: hidden
                 h2
+                    font-size: 4.5vw
                     i
                         +dimensions(10vw, 10vw)
                         font-size: 7vw
                         padding: 2vw
             .hobbies
                 h2
+                    font-size: 4.5vw
                     i
                         +dimensions(10vw, 10vw)
                         font-size: 7vw
                         padding: 1.8vw 1.5vw
+                ul
+                    li
+                        i
+                            +dimensions(10vw, 10vw)
+                            font-size: 10vw
+                            margin-right: 7vw
+                            position: relative
+                            top: 3vw
         main
-            width: 100%
+            header
+                h1
+                    font-size: 13vw
+            .projects
+                h2
+                    font-size: 6vw
+                    i
+                        +dimensions(12vw, 12vw)
+                        padding: 3vw 2.9vw
+                        margin-right: 3vw
+            .skills
+                h2
+                    font-size: 6vw
+                    i
+                        +dimensions(12vw, 12vw)
+                        padding: 3vw 2.9vw
+                        margin-right: 3vw
+            .languages
+                h2
+                    font-size: 6vw
+                    i
+                        +dimensions(12vw, 12vw)
+                        padding: 3vw 2.9vw
+                        margin-right: 3vw
+            .occupational_experience
+                h2
+                    font-size: 6vw
+                    i
+                        +dimensions(12vw, 12vw)
+                        padding: 3vw 3.5vw
+                        margin-right: 3vw
+            .education
+                h2
+                    font-size: 6vw
+                    i
+                        +dimensions(12vw, 12vw)
+                        padding: 3vw 2.5vw
+                        margin-right: 3vw
     footer
         font-size: 14px
